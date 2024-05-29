@@ -1,0 +1,23 @@
+//initiate mongo db 
+const { timeStamp } = require('console');
+const mongoose = require('mongoose');
+
+const TaskSchema = mongoose.Schema(
+    {
+        name :{
+            type : String,
+            required : true
+        },
+        TaskId : {
+            type : Number,
+            required : true,
+            default : 0
+        }
+    },
+    {
+        timestamps : true //indicates when an object was created.
+    }
+);
+
+const Task = mongoose.model("Tasks" , TaskSchema);
+module.exports = Task;
