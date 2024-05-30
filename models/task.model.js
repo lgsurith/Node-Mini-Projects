@@ -1,5 +1,4 @@
 //initiate mongo db 
-const { timeStamp } = require('console');
 const mongoose = require('mongoose');
 
 const TaskSchema = mongoose.Schema(
@@ -11,7 +10,6 @@ const TaskSchema = mongoose.Schema(
         TaskId : {
             type : Number,
             required : true,
-            default : 0
         }
     },
     {
